@@ -1,8 +1,0 @@
-Feature: Test first run
-
-Scenario:
-Test bigbasket login 
-Given login to user
-When click on submit
-Then close browser
-
