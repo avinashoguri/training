@@ -1,0 +1,47 @@
+package stepDefenations;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+import pageObjects.Login_PageObjects;
+import pageObjects.VideoPromotion_PageObjects;
+import resources.Base;
+import cucumber.api.java.en.Then;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import cucumber.api.java.en.And;
+
+public class RS_StepDefenation extends Base {
+
+	public static Logger log =LogManager.getLogger(AutoPay_1_StepDefenation.class.getName());
+
+	String befourBudget;
+	String afterBudget;
+
+
+
+	@Given("^: login with exesting user \"([^\"]*)\" \"([^\"]*)\"$")
+	public void login_with_exesting_user(String arg1, String arg2) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		try {
+			driver=initializeDriver();
+			driver.get("https://dev.baymack.com/promolta/advertiser/allvideohomepage");
+			log.info("User is on promolta Login page");
+
+			Login_PageObjects lp=new Login_PageObjects(driver);
+
+			lp.userName().sendKeys(arg1);
+			lp.password().sendKeys(arg2);
+			lp.startCampaign_Login().click();
+			log.info("username and password  entered");
+			Thread.sleep(3000);
+		}
+		catch(Exception e) {
+			log.error(e);
+		}
+	}
+
+}
+}

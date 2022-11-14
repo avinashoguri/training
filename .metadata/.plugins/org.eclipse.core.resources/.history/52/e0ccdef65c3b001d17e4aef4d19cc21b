@@ -1,0 +1,118 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Rahulshetty_PageObjects {
+	WebDriver driver;
+	public Rahulshetty_PageObjects(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+				this.driver=driver;
+				PageFactory.initElements(driver, this);
+			
+		}
+	
+	@FindBy(xpath = "//*[@id=\"myCarousel\"]/div/div[3]/div[5]/ul/li[1]/a[1]")
+	WebElement alsoWant_likeandComment;
+	public WebElement alsoWant_likeandComment() {
+		return alsoWant_likeandComment;
+	}
+	
+	@FindBy(xpath = "//a[contains(text(),'Subscribers')]")
+	WebElement alsoWant_Subscribers;
+
+	public WebElement alsoWant_Subscribers() {
+		return alsoWant_Subscribers;
+	}
+	
+	@FindBy(xpath = "//a[contains(text(),'App Installs')]")
+	WebElement alsoWant_appInstalls;
+
+	public WebElement alsoWant_appInstalls() {
+		return alsoWant_appInstalls;
+	}
+	
+	@FindBy(xpath = "//a[@class='option_btn_all genderbtn btnactive']")
+	WebElement gender_ALL;
+
+	public WebElement gender_ALL() {
+		return gender_ALL;
+	}
+	
+	@FindBy(xpath = "//a[contains(text(),'Male')]")
+	WebElement gender_Men;
+
+	public WebElement genderMen() {
+		return gender_Men;
+	}
+	
+	@FindBy(xpath = "//a[contains(text(),'Female')]")
+	WebElement gender_Female;
+
+	public WebElement gender_Female() {
+		return gender_Female;
+	}
+	
+	@FindBy(xpath = "//*[@id=\"myCarousel\"]/div/div[3]/div[5]/ul/li[3]/a")
+	WebElement age_All;
+
+	public WebElement age_All() {
+		return age_All;
+	}
+	
+	@FindBy(xpath = "//a[contains(@class,'age10')]")
+	WebElement age13_24;
+
+	public WebElement age13_24() {
+		return age13_24;
+	}
+	@FindBy(xpath = "//a[contains(@class,'age4')]")
+	WebElement age25_34;
+
+	public WebElement age25_34() {
+		return age25_34;
+	}
+
+	
+	@FindBy(xpath = "//a[contains(@class,'age5')]")
+	WebElement age35_44;
+
+	public WebElement age35_44() {
+		return age35_44;
+	}
+	@FindBy(xpath = "//a[contains(@class,'age6')]")
+	WebElement age45_54;
+
+	public WebElement age45_54() {
+		return age45_54;
+	}
+
+	@FindBy(xpath = "//a[contains(@class,'age7')]")
+	WebElement age55_64;
+
+	public WebElement age55_64() {
+		return age55_64;
+	}
+	@FindBy(xpath = "//a[@id='videocountry']")
+	WebElement location_Global;
+
+	public WebElement location_Global() {
+		return location_Global;
+	}
+
+	
+	@FindBy(xpath = "//a[contains(text(),'Choose Countries')]")
+	WebElement location_chooseCountries;
+
+	public WebElement location_chooseCountries() {
+		return location_chooseCountries;
+	}
+	@FindBy(xpath = "//span[contains(@class,'video_sprite next-btn')]")
+	WebElement nextButton;
+
+	public WebElement nextButton() {
+		return nextButton;
+	}
+}

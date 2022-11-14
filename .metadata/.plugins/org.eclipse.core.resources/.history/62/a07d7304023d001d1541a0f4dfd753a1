@@ -1,0 +1,47 @@
+package stepDefenations;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+import resources.Base;
+import cucumber.api.java.en.Then;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+
+public class RS_StepDefenation extends Base {
+
+	public static Logger log =LogManager.getLogger(RS_StepDefenation.class.getName());
+
+	@Given("^login to Rahul page$")
+    public void login_to_rahul_page() throws Throwable {
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+        Thread.sleep(3000);
+        
+    }
+
+    @Then("^Do operations$")
+    public void do_operations() throws Throwable {
+    	WebElement wedrop=driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
+    	Select dropdown=new Select(wedrop);
+    	dropdown.selectByIndex(1);
+    	dropdown.deselectByValue(null);
+    	System.out.println(dropdown.getClass());
+    	
+    	
+    	
+        
+    }
+
+    @Then("^Close browser$")
+    public void close_browser() throws Throwable {
+        
+    }
+}
+
